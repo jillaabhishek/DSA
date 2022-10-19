@@ -58,7 +58,6 @@ namespace DSA.Assignment_9
         {
             //var colLength = nums.GetLength(0);
             //var rowLength = nums.GetLength(1);
-            ////row, col = matrix.shape
             //int row2 = rowLength / 2;
             //int col2 = colLength / 2;
 
