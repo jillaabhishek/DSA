@@ -20,9 +20,10 @@ namespace DSA.Assignment_9
             double element = 2.10;
             int power = 3;
 
-            if (power < 0)
+            if (power < 0){
                 element = 1 / element;
-
+                power = Math.Abs(power);
+            }
             double output = FindPower(element, power);
 
             Console.WriteLine($"{element} power of {power} is: " + output);
