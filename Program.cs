@@ -1,9 +1,11 @@
 ﻿using DSA;
+using DSA.Assignment_10;
 using DSA.Assignment_5;
 using DSA.Assignment_6;
 using DSA.Assignment_7;
 using DSA.Assignment_8;
 using DSA.Assignment_9;
+using DSA.Assignment8;
 using DSA.DivideAndConquer_Algo;
 using DSA.HeapSort;
 using DSA.LinkedList_Datatype;
@@ -126,6 +128,10 @@ namespace ConsoleApp3
             SortColor sortColor = new SortColor();
             //sortColor.Run();
 
+
+            SortColorApproach_2 sortColorApproach_2 = new SortColorApproach_2();
+            //sortColorApproach_2.Run();
+
             FindMajorityElement majorityElement = new FindMajorityElement();
             //majorityElement.Run();
 
@@ -148,9 +154,29 @@ namespace ConsoleApp3
 
             StrassensMatrixMultiplication strassensMatrix = new StrassensMatrixMultiplication();
             //strassensMatrix.Run();
-                        
+
             SingleLinkedList singleLinkedList = new SingleLinkedList();
             //singleLinkedList.Run();
+
+            MergeTwoSortedLinkedList mergeTwoSortedLinkedList = new MergeTwoSortedLinkedList();
+            //mergeTwoSortedLinkedList.Run();
+
+
+            ReversalLinkedList reversalLinkedList = new ReversalLinkedList();
+            //reversalLinkedList.Run();
+
+            LinkedListCycle linkedListCycle = new LinkedListCycle();
+            //linkedListCycle.Run();
+
+            PalindromeLinkedList palindromeLinkedList = new PalindromeLinkedList();
+            //palindromeLinkedList.Run();
+
+            SortLinkedList sortLinkedList = new SortLinkedList();
+            //sortLinkedList.Run();
+
+            RemoveNthNodeFromLinkedList removeNthNode = new RemoveNthNodeFromLinkedList();
+            removeNthNode.Run();
+
 
             Console.WriteLine();
 

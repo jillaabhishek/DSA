@@ -16,19 +16,25 @@ namespace DSA.LinkedList_Datatype
             SingleLinkedList instance = new SingleLinkedList();
 
             //Inserting at End
-            instance.InsertAtBeginning(instance, 12);
             instance.InsertAtBeginning(instance, 10);
-            instance.InsertAtBeginning(instance, 9);
-            instance.InsertAtBeginning(instance, 5);
-            instance.InsertAtBeginning(instance, 1);
-            instance.InsertAtBeginning(instance, 0);
-
-            //Inserting at End
+            instance.InsertAtEnd(instance, 20);
+            instance.InsertAtEnd(instance, 30);
+            instance.InsertAtEnd(instance, 40);
             instance.InsertAtEnd(instance, 50);
+            //instance.InsertAtEnd(instance, 0);
 
-            //Inserting in middle 
-            instance.InsertAfterNode(instance.head.next, 11);
+            ////Inserting at End
+            //instance.InsertAtEnd(instance, 50);
 
+            ////Inserting in middle 
+            //instance.InsertAfterNode(instance.head.next, 11);
+
+
+            //DeleteNode(instance, 3);
+
+            //Console.WriteLine("Number of Count: " + CountNode(instance));
+
+            Console.WriteLine("Search Data is present: " + SearchNode(instance, 11));
 
             PrintLinkedList(instance);
         }
@@ -60,6 +66,56 @@ namespace DSA.LinkedList_Datatype
             new_Node.next = prevNode.next;
 
             prevNode.next = new_Node;
+        }
+
+        public void DeleteNode(SingleLinkedList instance, int position)
+        {
+            Node temp = instance.head;
+
+            if (temp.next is null)
+                return;
+
+            for (int i = 0; i < position - 1; i++)
+            {
+                temp = temp.next;
+
+                if (temp.next is null)
+                    return;
+            }
+
+            Node tempNextPtr = temp.next.next;
+            temp.next = null;
+            temp.next = tempNextPtr;
+        }
+
+        public int CountNode(SingleLinkedList instance)
+        {
+            int count = 0;
+            Node temp = instance.head;
+
+            while (temp is not null)
+            {
+                temp = temp.next;
+                count++;
+            }
+
+            return count;
+        }
+
+        public bool SearchNode(SingleLinkedList instance, int expectedData)
+        {
+            Node temp = instance.head;
+            bool isDataPresent = false;
+
+            while (temp is not null)
+            {
+                if (temp.data == expectedData)
+                    return true;
+                else
+                    temp = temp.next;
+            }
+
+            return isDataPresent;
         }
 
         public void PrintLinkedList(SingleLinkedList instance)
