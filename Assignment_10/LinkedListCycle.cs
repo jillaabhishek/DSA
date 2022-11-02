@@ -28,13 +28,13 @@ namespace DSA.Assignment_10
             //Creating a loop Cycle
             head.next.next.next.next = head;
 
-            Console.WriteLine("Is Loop Cycle Deteched: " + DetechLoopCycle());
+            Console.WriteLine("Is Loop Cycle Deteched: " + DetechLoopCycle(head));
         }
 
-        public bool DetechLoopCycle()
+        public bool DetechLoopCycle(Node _head)
         {
-            Node t = head;
-            Node h = head;
+            Node t = _head;
+            Node h = _head;
 
             while (t != null && h != null && h.next != null)
             {                
