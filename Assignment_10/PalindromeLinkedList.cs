@@ -18,8 +18,58 @@ namespace DSA.Assignment_10
             InsertAtEnd(2);
             InsertAtEnd(1);
 
-            Console.WriteLine("Is Palindrome: " + IsPalindrome());
+            Console.WriteLine("Is Palindrome: " + IsPalindrome_2());
         }
+
+        //Using Stack data structure
+
+        public bool IsPalindrome_2()
+        {
+            Stack<int> stack = new Stack<int>();
+            
+            Node curr = head;
+            while (curr != null)
+            {
+                stack.Push(curr.data);
+
+                curr = curr.next;
+            }
+
+            curr = head;
+
+            // In this approach we only loop half the length of stack.
+            // Because if half of the stack data matches with the linkedList data. 
+            // Then it's palindrome
+
+            for(int i = 0; i <= stack.Count/2; i++)
+            {
+                if (curr.data == stack.Peek())
+                {
+                    stack.Pop();
+                }
+                else
+                    return false;
+
+                curr = curr.next;
+            }
+
+
+            // Other Way
+            // It will loop all the elment
+
+            //while (curr != null)
+            //{
+            //    if (curr.data == stack.Peek())
+            //    {
+            //        stack.Pop();
+            //    }
+
+            //    curr = curr.next;
+            //}
+
+            return true;
+        }
+
 
         // Floyd's Detection Algo / Two Pointer Approach
         // Using 2-pointer approach of tortosis and hare
