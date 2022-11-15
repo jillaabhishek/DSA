@@ -18,7 +18,7 @@ namespace DSA.Stack_DataType
 
         public bool IsValid(string input)
         {
-            Stack<char> stack = new Stack<char>();
+            Stack<char> stack = new Stack<char>();           
 
             Dictionary<char, char> bracketMapping = new Dictionary<char, char>();
             bracketMapping.Add('{', '}');

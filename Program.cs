@@ -1,5 +1,7 @@
 ﻿using DSA;
 using DSA.Assignment_10;
+using DSA.Assignment_11;
+using DSA.Assignment_12;
 using DSA.Assignment_5;
 using DSA.Assignment_6;
 using DSA.Assignment_7;
@@ -7,12 +9,15 @@ using DSA.Assignment_8;
 using DSA.Assignment_9;
 using DSA.Assignment8;
 using DSA.DivideAndConquer_Algo;
+using DSA.Hashing_Data_Type;
 using DSA.HeapSort;
 using DSA.LinkedList_Datatype;
 using DSA.MergeSort;
 using DSA.QuickSort;
 using DSA.Sorting_Algo;
+using DSA.Stack_DataType;
 using DSA.Testing;
+using QueueDataType.Queue;
 
 namespace ConsoleApp3
 {
@@ -175,8 +180,46 @@ namespace ConsoleApp3
             //sortLinkedList.Run();
 
             RemoveNthNodeFromLinkedList removeNthNode = new RemoveNthNodeFromLinkedList();
-            removeNthNode.Run();
+            //removeNthNode.Run();
 
+            ConvertSinglyToCircularLinkedList convertSingly = new ConvertSinglyToCircularLinkedList();
+            //convertSingly.Run();
+
+            FindStringIsvalid isvalid = new FindStringIsvalid();
+            //isvalid.Run();
+
+            QueuePractice queuePractice = new QueuePractice();
+            //queuePractice.Run();
+
+            ImplementStackUsingQueue queue = new ImplementStackUsingQueue();
+            //queue.Run();
+
+            ImplementStackUsingQueueApproach_2 queueApproach_2 = new ImplementStackUsingQueueApproach_2();
+            //queueApproach_2.Run();
+
+            ImplementQueueUsingStack queueUsingStack = new ImplementQueueUsingStack();
+            //queueUsingStack.Run();
+
+            ImplementQueueUsingStackApproach_2 stackApproach_2 = new ImplementQueueUsingStackApproach_2();
+            //stackApproach_2.Run();
+
+            HashTable hashTable = new HashTable();
+            //hashTable.Run();
+
+            HashTableUsingMidSqaure midSqaure = new HashTableUsingMidSqaure();
+            //midSqaure.Run();
+
+            HashTableWithChainingCollision chainingCollision = new HashTableWithChainingCollision();
+            //chainingCollision.Run();
+
+            HashTableLinearProbingCollision linearProbingCollision = new HashTableLinearProbingCollision();
+            linearProbingCollision.Run();
+
+            HashTableQuadraticProbingCollision quadraticProbingCollision = new HashTableQuadraticProbingCollision();
+            quadraticProbingCollision.Run();
+
+            HashTableDoubleHashingCollision doubleHashingCollision = new HashTableDoubleHashingCollision();
+            doubleHashingCollision.Run();
 
             Console.WriteLine();
 
