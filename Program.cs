@@ -2,6 +2,8 @@
 using DSA.Assignment_10;
 using DSA.Assignment_11;
 using DSA.Assignment_12;
+using DSA.Assignment_13;
+using DSA.Assignment_14;
 using DSA.Assignment_5;
 using DSA.Assignment_6;
 using DSA.Assignment_7;
@@ -17,6 +19,7 @@ using DSA.QuickSort;
 using DSA.Sorting_Algo;
 using DSA.Stack_DataType;
 using DSA.Testing;
+using DSA.Tree_Data_Structure;
 using QueueDataType.Queue;
 
 namespace ConsoleApp3
@@ -213,13 +216,25 @@ namespace ConsoleApp3
             //chainingCollision.Run();
 
             HashTableLinearProbingCollision linearProbingCollision = new HashTableLinearProbingCollision();
-            linearProbingCollision.Run();
+            //linearProbingCollision.Run();
 
             HashTableQuadraticProbingCollision quadraticProbingCollision = new HashTableQuadraticProbingCollision();
-            quadraticProbingCollision.Run();
+            //quadraticProbingCollision.Run();
 
             HashTableDoubleHashingCollision doubleHashingCollision = new HashTableDoubleHashingCollision();
-            doubleHashingCollision.Run();
+            //doubleHashingCollision.Run();
+
+            TreeTraversalAlgorithm treeTraversal = new TreeTraversalAlgorithm();
+            //treeTraversal.Run();
+
+            TreeTraversalAlgorithmWithoutRecursion algorithmWithoutRecursion = new TreeTraversalAlgorithmWithoutRecursion();
+            //algorithmWithoutRecursion.Run();
+
+            RecoverBinarySearchTree recoverBinary = new RecoverBinarySearchTree();
+            //recoverBinary.Run();
+
+            LCAOfBinarySearchTree lcaBST = new LCAOfBinarySearchTree();
+            lcaBST.Run();
 
             Console.WriteLine();
 
