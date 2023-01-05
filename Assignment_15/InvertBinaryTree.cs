@@ -23,6 +23,21 @@ namespace DSA.Assignment_15
             PostOrder(root);
         }
 
+        public TreeNode InvertTreeApproach_2(TreeNode root)
+        {
+            if (root is not null)
+            {
+
+                var leftSubTree = InvertTreeApproach_2(root.left);
+                var rightSubTree = InvertTreeApproach_2(root.right);
+
+                root.left = rightSubTree;
+                root.right = leftSubTree;
+            }
+
+            return root;
+        }
+
         public void PostOrder(TreeNode root)
         {
             if (root != null)

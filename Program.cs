@@ -4,13 +4,17 @@ using DSA.Assignment_11;
 using DSA.Assignment_12;
 using DSA.Assignment_13;
 using DSA.Assignment_14;
+using DSA.Assignment_15;
 using DSA.Assignment_5;
 using DSA.Assignment_6;
 using DSA.Assignment_7;
 using DSA.Assignment_8;
 using DSA.Assignment_9;
 using DSA.Assignment8;
+using DSA.BST_Problem;
 using DSA.DivideAndConquer_Algo;
+using DSA.Dynamic_Programming;
+using DSA.Graph_Data_Structure;
 using DSA.Hashing_Data_Type;
 using DSA.HeapSort;
 using DSA.LinkedList_Datatype;
@@ -234,7 +238,32 @@ namespace ConsoleApp3
             //recoverBinary.Run();
 
             LCAOfBinarySearchTree lcaBST = new LCAOfBinarySearchTree();
-            lcaBST.Run();
+            //lcaBST.Run();
+
+            FindPathExistInGraph existInGraph = new FindPathExistInGraph();
+            //existInGraph.Run();
+
+            DepthFirstTraversal depthFirstTraversal = new DepthFirstTraversal();
+            //depthFirstTraversal.Run();
+
+            InvertBinaryTree invertBinaryTree = new InvertBinaryTree();
+            //invertBinaryTree.Run();
+
+
+            ValidBST validBST = new ValidBST();
+            //validBST.Run();
+
+            FibonacciSeriesUsingDP usingDP = new FibonacciSeriesUsingDP();
+            //usingDP.Run();
+
+            LongestCommonSubSequence subSequence = new LongestCommonSubSequence();
+            //subSequence.Run();
+
+            _01Knapsack _01Knapsack = new _01Knapsack();
+            //_01Knapsack.Run();
+
+            CatalanNumber catalanNumber = new CatalanNumber();
+            catalanNumber.Run();
 
             Console.WriteLine();
 

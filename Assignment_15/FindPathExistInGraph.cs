@@ -97,17 +97,17 @@ namespace DSA.Assignment_15
             AddVertex(n);
             AddEdges(edges);
 
-            FindPath_Approach2UsingRecursion(source);
+            return FindPath_Approach2UsingRecursion(source, destination);
 
 
-            return path.Contains(source) && path.Contains(destination);
+            //return path.Contains(source) && path.Contains(destination);
         }
 
-        public void FindPath_Approach2UsingRecursion(int vertex)
+        public bool FindPath_Approach2UsingRecursion(int vertex, int destination)
         {
-            if (visited.Contains(vertex))
-                return;
-            else
+            if (vertex == destination)
+                return true;
+            else if (!visited.Contains(vertex))
             {
                 path.Add(vertex);
                 visited.Add(vertex);
@@ -115,9 +115,11 @@ namespace DSA.Assignment_15
                 foreach (var neighbor in AdjacencyList[vertex])
                 {
                     if (!visited.Contains(neighbor))
-                        FindPath_Approach2UsingRecursion(neighbor);
+                        return FindPath_Approach2UsingRecursion(neighbor, destination);
                 }
             }
+
+            return false;
         }
 
         public void AddVertex(int n)
@@ -141,7 +143,7 @@ namespace DSA.Assignment_15
         }
 
 
-        
+
         // Approach 1
         // But doesn't pass all test cases in LeetCode.
         public bool ValidPath(int n, int[][] edges, int source, int destination)
